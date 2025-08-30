@@ -30,8 +30,10 @@ jobs:
       # run: npm playwright test --grep @sanity
       run: npm run test:sanity
 
-    - name: Create allure report
-      run: allure generate ./allure-results -o ./allure-report --clean
+    - name: Generate allure report
+      run: |
+        npm install -g allure-commandline
+        allure generate ./allure-results -o ./allure-report --clean
 
     - name: Upload Playwright HTML report
       uses: actions/upload-artifact@v4
