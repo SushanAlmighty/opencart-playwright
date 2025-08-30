@@ -5,8 +5,8 @@ import { MyAccountPage } from '../pages/MyAccountPage';
 import { TestConfig } from '../test.config';
 import { DataProvider } from '../utils/dataProvider'
 
-const jsonPath = "data/loginData.json";
-const csvPath = 'data/loginDAta.csv';
+const jsonPath = "./testData/loginData.json";
+const csvPath = './testData/loginData.csv';
 
 const jsonData: any = DataProvider.getTestDataFromJson(jsonPath);
 const csvData: any = DataProvider.getTestDataFromCsv(csvPath);
