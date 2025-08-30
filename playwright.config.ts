@@ -10,8 +10,8 @@ export default defineConfig({
   workers: 3,
 
   reporter: [
-    ['html', {outputFolder: '../reports/html-report'}],
-    ['allure-playwright', {outputFolder: '../reports/allure-results'}],
+    ['html', {outputFolder: './playwright-report'}],
+    ['allure-playwright', {outputFolder: './allure-results'}],
     // ['dot'],
     ['list']
   ],
