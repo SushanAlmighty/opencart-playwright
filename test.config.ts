@@ -1,8 +1,8 @@
 export class TestConfig{
 
     //url
-    // appUrl = "https://tutorialsninja.com/demo/"
-    appUrl = "https://naveenautomationlabs.com/opencart"
+    appUrl = "https://tutorialsninja.com/demo/"
+    // appUrl = "https://naveenautomationlabs.com/opencart"
 
     //valid login credentials
     email="pavanol@abc.com"

@@ -7,7 +7,7 @@ export default defineConfig({
   // retries: process.env.CI ? 2 : 0,
   retries: 1,
   // workers: process.env.CI ? 1 : undefined,
-  // workers: 2,
+  workers: 3,
 
   reporter: [
     ['html', {outputFolder: '../reports/html-report'}],
@@ -30,7 +30,7 @@ export default defineConfig({
 
   projects: [
     {name: 'chromium', use: { ...devices['Desktop Chrome']}},
-    // {name: 'firefox', use: { ...devices['Desktop Firefox']}},
-    // {name: 'webkit', use: { ...devices['Desktop Safari']}}
+    {name: 'firefox', use: { ...devices['Desktop Firefox']}},
+    {name: 'webkit', use: { ...devices['Desktop Safari']}}
   ],
 });
