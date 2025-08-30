@@ -4,10 +4,10 @@ export default defineConfig({
   timeout: 30 * 1000,
   testDir: './tests',
   fullyParallel: true,
-  // retries: process.env.CI ? 2 : 0,
-  retries: 1,
-  // workers: process.env.CI ? 1 : undefined,
-  workers: 3,
+  retries: process.env.CI ? 2 : 0,
+  // retries: 1,
+  workers: process.env.CI ? 1 : undefined,
+  // workers: 3,
 
   reporter: [
     ['html', {outputFolder: './playwright-report'}],
@@ -17,7 +17,7 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'https://tutorialsninja.com/demo/',
+    // baseURL: 'https://tutorialsninja.com/demo/',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
